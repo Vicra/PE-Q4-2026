@@ -1,4 +1,6 @@
+# ciclo infinito
 while True:
+  print("\n------------------")
   print("MENU")
   print("1. Sumar")
   print("2. Restar")
@@ -7,8 +9,10 @@ while True:
   print("0. SALIR DEL SISTEMA")
   option = int(input("Ingrese una opcion:"))
 
-  if(option < 0 or option > 4):
-    print("Opcion no valida")
+  if(option == 0):
+    print("Ok bye")
+  elif(option < 1 or option > 4):
+    print("Opcion no valida\n")
   else:
     x = int(input("Ingrese el valor de x:"))
     y = int(input("Ingrese el valor de y:"))
@@ -28,3 +32,4 @@ while True:
   elif(option == 0):
     print("BYEEE!")
     break
+print("Afuera del while")
