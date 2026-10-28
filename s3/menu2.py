@@ -5,7 +5,7 @@ while(option != "Z"):
   print("A. Sumar")
   print("B. Restar")
   print("C. Multiplicar")
-  print("Z. SALIR") 
+  print("Z. SALIR")
 
   option = input("Ingrese una opcion: ")
   # convertir de minusculas a mayusculas
