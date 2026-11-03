@@ -25,3 +25,13 @@ for i in range(0, len(nombresProductos)):
 
 if (encontro == False):
   print("No encontro ese producto")
+
+# --------------
+# Creacion
+
+# agrega un elemento al final de la lista
+
+idProductos.append(4)
+
+for i in range(0, len(idProductos)):
+  print(idProductos[i])
