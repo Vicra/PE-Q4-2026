@@ -1,17 +1,44 @@
-candidatos = ["Planilla1", "Planilla2", "Planilla3"]
+import os
+
+candidatos = ["Esther", "Carolina", "Miguel"]
 votos = [0,0,0]
 
-cantidadVotantes = int(input("Ingrese la cantidad de votantes: "))
+participantes = int(input("Cuantos participantes van a votar?: "))
 
-for i in range(0, cantidadVotantes):
-  print("\n-----LISTA DE CANDIDATOS----")
-  for j in range(0, len(candidatos)):
-    print(f"{j+1} {candidatos[j]}")
+def limpiar_consola():
+  # 'nt' es para Windows, 'posix' para Linux/macOS
+  os.system('cls' if os.name == 'nt' else 'clear')
 
-  voto = int(input("Ingrese su voto: "))
+def mostrar_candidatos():
+  print("\n===== CANDIDATOS ======")
+  for i in range(len(candidatos)):
+    print(f"{i+1}.- {candidatos[i]}")
 
-  voto = voto-1
+def mostrar_votos():
+  print("\n==== RESULTADOS ===")
+  for i in range(len(candidatos)):
+    print(f"{candidatos[i]} {votos[i]}")
 
-  votos[voto] = votos[voto] + 1
+def mostrar_ganador():
+  mayor = 0
+  for i in range(1, len(votos)):
+    if(votos[i] > votos[mayor]):
+      mayor = i
+  print("GANADOR:", candidatos[mayor])
 
-print(votos)
+# ciclo principal para ver cuantos votos se van a registrar
+for i in range(1, participantes+1):
+  # mostrar los candidatos
+  # pedir el voto
+  mostrar_candidatos()
+  tuVoto = int(input("Cual es tu voto?: "))
+
+  # obtener el indice a cual le voy a sumar un voto
+  votoIndiceOg = tuVoto - 1
+
+  # sumar el voto al acumulado de votos
+  votos[votoIndiceOg] = votos[votoIndiceOg] + 1
+  limpiar_consola()
+  
+mostrar_votos()
+mostrar_ganador()
