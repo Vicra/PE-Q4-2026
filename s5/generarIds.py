@@ -48,3 +48,4 @@ ids.remove(7)
 ids.append(generarIdParaProductos())
 
 print("Lista de ids:", ids)
+
