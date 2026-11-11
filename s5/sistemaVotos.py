@@ -17,6 +17,7 @@ def mostrar_candidatos():
 def mostrar_votos():
   print("\n==== RESULTADOS ===")
   for i in range(len(candidatos)):
+    # embedded string -> texto empotrado/embebido
     print(f"{candidatos[i]} {votos[i]}")
 
 def mostrar_ganador():
