@@ -66,14 +66,22 @@ print("")
 
 cuenta = input("Ingrese el numero de cuenta:")
 nombre = input("Ingrese el nombre:")
-apellido = input("Ingrese el apellido:")
+apellidos = input("Ingrese el apellido:")
 carrera = input("Ingrese la carrera:")
 
 # diccionario[llave]
 # leer el valor de la llave -> print(diccionario[llave])
 # asinar una nueva llave -> diccionario[llave] = 
+alumnos[cuenta] = {
+  "nombre": nombre,
+  "apellidos": apellidos,
+  "carrera": carrera,
+}
 
 
+for key, value in alumnos.items():
+  print(f"{value["nombre"]} {value["apellidos"]} - {key} - {value["carrera"]}")
+print("")
 
 # print(ordenes)
 
