@@ -85,8 +85,29 @@ def mostrar_menu_carreras():
     match option:
       case 1:
         mostrar_carreras()
+      case 2:
+        agregar_carrera()
+      case 3:
+        borrar_carrera()
       case 0:
         print("\nSaliendo del submenu...")
+
+def borrar_carrera():
+  mostrar_carreras()
+  codigoAborrar = input("Ingrese el codigo de la carrera que desea borrar:")
+
+  # validar si tiene info relacionada
+  hayRelacion = False
+  for value in materias.values():
+    if value["carrera"] == codigoAborrar:
+      hayRelacion = True
+      break
+  if hayRelacion == True:
+    print("No puede borrar una carrera relacionada con materias")
+  else:
+    carreras.pop(codigoAborrar)
+    print("Se elimino la carrera:", codigoAborrar)
+  
 
 def mostrar_carreras():
   print("\n===CARRERAS===")
