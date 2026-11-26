@@ -1,12 +1,30 @@
 carreras = {
   "I1": "Ing sistemas",
   "I2": "Ing Civil",
-  "I3": "Ing Mecatronica",
-  "I4": "Ing Industrial",
-  "I5": "Ing Energia",
-  "I6": "Ing Biomedica",
-  "I7": "Ing Telecom",
-  "I8": "Ing Ciencia de Datos"
+  "I3": "Ing Mecatronica"
+}
+
+materias = {
+  "M1": {
+    "codigo": "PRO1",
+    "nombre": "Programacion 1",
+    "carrera": "I1"
+  },
+  "M2": {
+    "codigo": "PRO2",
+    "nombre": "Programacion 2",
+    "carrera": "I1"
+  },
+  "M3": {
+    "codigo": "TOP1",
+    "nombre": "Topografia 1",
+    "carrera": "I2"
+  },
+  "M4": {
+    "codigo": "TOP2",
+    "nombre": "Topografia 2",
+    "carrera": "I2"
+  }
 }
 
 # mostrar las carreras
